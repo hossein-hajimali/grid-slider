@@ -2181,6 +2181,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #ccc;
+  font-family: arial;
 }
 
 .main-wrapper {
@@ -2189,4 +2190,20 @@ html, body {
   margin: 0 auto;
   overflow: hidden;
   background-color: #eee;
+}
+
+.each-slide {
+  position: relative;
+  border: 1px solid #444;
+}
+.each-slide > span {
+  display: inline-block;
+  font-size: 200%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
