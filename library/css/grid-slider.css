@@ -2198,8 +2198,8 @@ html, body {
 }
 
 #mySlider {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   border: 1px solid #777;
   margin: 100px auto;
   position: relative;
@@ -2243,16 +2243,19 @@ html, body {
 .slider-row {
   position: absolute;
 }
-.slider-row:nth-child(odd) {
-  left: 0;
-}
-.slider-row:nth-child(odd) .each-slide {
+.slider-row.normal .each-slide {
   float: left;
 }
-.slider-row:nth-child(even) {
+.slider-row.snake:nth-child(odd) {
+  left: 0;
+}
+.slider-row.snake:nth-child(odd) .each-slide {
+  float: left;
+}
+.slider-row.snake:nth-child(even) {
   right: 0;
 }
-.slider-row:nth-child(even) .each-slide {
+.slider-row.snake:nth-child(even) .each-slide {
   float: right;
 }
 
@@ -2260,6 +2263,6 @@ html, body {
   overflow: hidden;
 }
 .each-slide img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }

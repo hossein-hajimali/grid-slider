@@ -6,7 +6,8 @@
 			animateTime: 0.2,
 			easing: "ease",
 			nextHtml: '<',
-			prevHtml: '>'
+			prevHtml: '>',
+			effect: 'normal'
 		}, options);
 		function moveSliderLeft($obj,index){
 			$obj.css({
@@ -27,10 +28,14 @@
 			});
 		}
 		function checkRow(index, rc){
-			if(index % 2 == 1){
+			if(settings.effect == "normal"){
 				moveSliderLeft($('.slider-row.row'+index), rc*slideWidth);
-			} else{
-				moveSliderRight($('.slider-row.row'+index), rc*slideWidth);
+			} else if(settings.effect == "snake"){
+				if(index % 2 == 1){
+					moveSliderLeft($('.slider-row.row'+index), rc*slideWidth);
+				} else{
+					moveSliderRight($('.slider-row.row'+index), rc*slideWidth);
+				}
 			}
 		}
 		var $mother = $('#mySlider'),
@@ -56,15 +61,22 @@
 		});
 		$eachElement.hide();
 		$mother.append('<div class="slider-frame"></div>');
+
+
 		for(var i=1; i<=sliderRow;i++){
-			rowCounter[i-1]= (i-1)*sliderCol;
-			$('.slider-frame').append('<div class="slider-row row'+i+'"></div>')
-			$('.slider-row.row'+i).css('top',(i-1)*slideHeight);
-			if(i%2 == 1){
+			rowCounter[i-1] = (i-1)*sliderCol;
+			if(settings.effect == "normal"){
+				$('.slider-frame').append('<div class="slider-row normal row'+i+'"></div>');
 				moveSliderLeft($('.slider-row.row'+i), rowCounter[i-1]*slideWidth);
-			} else{
-				moveSliderRight($('.slider-row.row'+i), rowCounter[i-1]*slideWidth);
+			} else if(settings.effect == 'snake'){
+				$('.slider-frame').append('<div class="slider-row snake row'+i+'"></div>');
+				if(i%2 == 1){
+					moveSliderLeft($('.slider-row.row'+i), rowCounter[i-1]*slideWidth);
+				} else{
+					moveSliderRight($('.slider-row.row'+i), rowCounter[i-1]*slideWidth);
+				}
 			}
+			$('.slider-row.row'+i).css('top',(i-1)*slideHeight);
 			for(var j=0;j<slidesLength;j++){
 				$('.slider-row.row'+i).append('<div class="each-slide">'+$slides[j]+'</div>');
 			}
