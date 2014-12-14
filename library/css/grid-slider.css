@@ -2182,10 +2182,6 @@
 }
 
 #mySlider {
-  width: 500px;
-  height: 500px;
-  border: 1px solid #777;
-  margin: 100px auto;
   position: relative;
 }
 
@@ -2212,7 +2208,7 @@
   transform: translate(0, -50%);
 }
 .slider-controller.disable {
-  color: red;
+  color: #ccc;
   cursor: default;
   pointer-events: none;
 }

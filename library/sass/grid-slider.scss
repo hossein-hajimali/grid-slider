@@ -10,10 +10,6 @@
 	@include box-sizing(border-box);
 }
 #mySlider{
-	width: 500px;
-	height: 500px;
-	border: 1px solid #777;
-	margin: 100px auto;
 	position: relative;
 }
 .slider-controller{
@@ -34,7 +30,7 @@
 		@include translate(0, -50%);
 	}
 	&.disable{
-		color: red;
+		color: #ccc;
 		cursor: default;
 		pointer-events: none;
 	}

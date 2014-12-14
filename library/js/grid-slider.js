@@ -35,7 +35,7 @@
 				if(index % 2 == 1){
 					moveSliderLeft($('.slider-row.row'+index), rc*slideWidth);
 				} else{
-					moveSliderRight($('.slider-row.row'+index), rc*slideWidth);
+					moveSliderRight($('.slider-row.row'+index), (rc*slideWidth)+1);
 				}
 			}
 		}
@@ -63,7 +63,7 @@
 			$prev = $('.slider-controller.prev'),
 			rowCounter = [];
 
-
+		
 		$next.html(settings.nextHtml).css('top', slideHeight/2);
 		$prev.html(settings.prevHtml).css('bottom', slideHeight/2);;
 		$eachElement.each(function(){
@@ -84,7 +84,7 @@
 				if(i%2 == 1){
 					moveSliderLeft($('.slider-row.row'+i), rowCounter[i-1]*slideWidth);
 				} else{
-					moveSliderRight($('.slider-row.row'+i), rowCounter[i-1]*slideWidth);
+					moveSliderRight($('.slider-row.row'+i), (rowCounter[i-1]*slideWidth)+1);
 				}
 			}
 			$('.slider-row.row'+i).css('top',(i-1)*slideHeight);

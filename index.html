@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Grid Slider</title>
+        <title>Grid Slider by Hossein Haji Mali</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Hossein Haji Mali | hajimali.com">
+        <meta name="rating" content="General">
+        <meta name="robots" content="index,follow">
+        <meta name="description" content="Grid Slider by Hossein Haji Mali">
+
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Grid Slider, jquery and css3 plugin">
+        <meta property="og:url" content="http://hajimali.com/grid-slider">
+        <meta property="og:image" content="http://hajimali.com/library/images/social-image.jpg">
+        <meta property="og:title" content="Grid Slider">
+        <meta property="og:title" content="Grid Slider">
+        <meta property="og:description" content="Grid Slider, jquery and css3 plugin.">
+
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="http://hajimali.com/grid-slider">
+        <meta name="twitter:domain" content="hajimali.com">
+        <meta name="twitter:site" content="@hossein_hm">
+        <meta name="twitter:creator" content="@hossein_hm">
+        <meta name="twitter:image" content="http://hajimali.com/library/images/social-image.jpg">
+        <meta name="twitter:title" content="Grid Slider">
+        <meta name="twitter:title" content="Grid Slider">
+        <meta name="twitter:description" content="Grid Slider, jquery and css3 plugin">
+
+        <link rel="apple-touch-icon" sizes="32x32" href="http://hajimali.com/library/images/icons/touch-icon-iphone.gif">
+        <link rel="apple-touch-icon" sizes="72x72" href="http://hajimali.com/library/images/icons/touch-icon-ipad.gif">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://hajimali.com/library/images/icons/touch-icon-iphone-retina.gif">
+        <link rel="apple-touch-icon" sizes="144x144" href="http://hajimali.com/library/images/icons/touch-icon-ipad-retina.gif">
+        <link rel="icon" type="image/png" href="http://hajimali.com/library/images/icons/favicon.png">
+
+
+        <link href='http://fonts.googleapis.com/css?family=Mandali' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" media="all" href="library/css/style.css">
         <link rel="stylesheet" type="text/css" media="all" href="library/css/grid-slider.css">
     </head>
     <body>
         <div class="main-wrapper">
+            <h1 class="title">Grid Slider</h1>
+            <h4 class="mini-des">A jquery &amp; Css3 Plugin</h4>
             <div id="mySlider">
                 <div class="each-slide"><span>01</span></div>
                 <div class="each-slide"><span>02</span></div>
@@ -28,6 +61,47 @@
                 <span class="slider-controller next">next</span>
                 <span class="slider-controller prev">prev</span>
             </div>
+            <h4 class="devider"><span>options</span></h4>
+            <div class="options clearfix">
+                <div class="left-section">
+                    <div class="buttons">
+                        <button data-name="normal">normal</button>
+                        <button data-name="snake">snake</button>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div class="inputs">
+                        <div>
+                            rowNumber:
+                            <input type="text" id="rowNumber" data-name="rowNumber" value="3">
+                        </div>
+                        <div>
+                            colNumber:
+                            <input type="text" id="colNumber" data-name="colNumber" value="3">
+                        </div>
+                        <div>
+                            rowActionTime (ms):
+                            <input type="text" id="rowActionTime" data-name="rowActionTime" value="100">
+                        </div>
+                        <div>
+                            animateTime (s):
+                            <input type="text" id="animateTime" data-name="animateTime" value="0.3"> 
+                        </div>
+                        <div>
+                            easing:
+                            <input type="text" id="easing" class="large" data-name="easing" value="ease"> 
+                        </div>
+                        <div>
+                            nextHtml:
+                            <input type="text" id="nextHtml" data-name="nextHtml" value='<i class="fa fa-angle-left"></i>'>
+                        </div>
+                        <div>
+                            prevHtml:
+                            <input type="text" id="prevHtml" data-name="prevHtml" value='<i class="fa fa-angle-right"></i>'>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Scripts -->
@@ -35,13 +109,32 @@
         <script type="text/javascript" src="library/js/min/grid-slider.min.js"></script>
         <script type="text/javascript">
             $('#mySlider').gridSlider({
-                rowNumber: 2,
-                colNumber: 1,
-                easing: "linear",
-                effect: 'normal',
                 nextHtml: '<i class="fa fa-angle-left"></i>',
                 prevHtml: '<i class="fa fa-angle-right"></i>'
             });
+            $('.buttons > button').each(function(){
+                $(this).on('click', function(){
+                    $('.slider-frame').remove();
+                    var $effect = $(this).data('name'),
+                        $rowNumber = $('#rowNumber').val(),
+                        $colNumber = $('#colNumber').val(),
+                        $rowActionTime = $('#rowActionTime').val(),
+                        $animateTime = $('#animateTime').val(),
+                        $easing = $('#easing').val(),
+                        $nextHtml = $('#nextHtml').val(),
+                        $prevHtml = $('#prevHtml').val();
+                    $('#mySlider').gridSlider({
+                        rowNumber: $rowNumber,
+                        colNumber: $colNumber,
+                        animateTime: $animateTime,
+                        easing: $easing,
+                        nextHtml: $nextHtml,
+                        prevHtml: $prevHtml,
+                        effect: $effect,
+                        rowActionTime: $rowActionTime
+                    });
+                });
+            })
         </script>
         <!-- /Scripts -->
     </body>

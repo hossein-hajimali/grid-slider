@@ -2180,8 +2180,10 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #ccc;
-  font-family: arial;
+  background-color: #D3C8B4;
+  color: #703E3B;
+  font-family: 'Mandali', sans-serif;
+  text-align: center;
 }
 
 .main-wrapper {
@@ -2189,12 +2191,51 @@ html, body {
   min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
-  background-color: #eee;
+  background-color: #E7E4D5;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.8);
+}
+
+.title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.mini-des {
+  margin-top: 0;
+}
+
+.devider {
+  text-transform: capitalize;
+  width: 90%;
+  margin: 10px auto 20px;
+  position: relative;
+}
+.devider > span {
+  background-color: #E7E4D5;
+  width: 90px;
+  position: relative;
+  display: inline-block;
+}
+.devider:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  background-color: #703E3B;
+}
+
+#mySlider {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #703E3B;
+  margin: 0 auto;
 }
 
 .each-slide {
   position: relative;
-  border: 1px solid #444;
 }
 .each-slide > span {
   display: inline-block;
@@ -2206,4 +2247,165 @@ html, body {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.each-slide:nth-child(1) {
+  background-color: #7d4542;
+}
+
+.each-slide:nth-child(2) {
+  background-color: #8b4d49;
+}
+
+.each-slide:nth-child(3) {
+  background-color: #985450;
+}
+
+.each-slide:nth-child(4) {
+  background-color: #a55c57;
+}
+
+.each-slide:nth-child(5) {
+  background-color: #ad6864;
+}
+
+.each-slide:nth-child(6) {
+  background-color: #b47571;
+}
+
+.each-slide:nth-child(7) {
+  background-color: #bb827e;
+}
+
+.each-slide:nth-child(8) {
+  background-color: #c28f8c;
+}
+
+.each-slide:nth-child(9) {
+  background-color: #c99c99;
+}
+
+.each-slide:nth-child(10) {
+  background-color: #d0a9a7;
+}
+
+.each-slide:nth-child(11) {
+  background-color: #d7b6b4;
+}
+
+.each-slide:nth-child(12) {
+  background-color: #dec3c1;
+}
+
+.each-slide:nth-child(13) {
+  background-color: #e6d0cf;
+}
+
+.each-slide:nth-child(14) {
+  background-color: #eddddc;
+}
+
+.each-slide:nth-child(15) {
+  background-color: #f4eae9;
+}
+
+.left-section, .right-section {
+  padding: 0 20px;
+  display: inline-block;
+}
+
+.left-section {
+  float: left;
+  width: 60%;
+}
+
+.right-section {
+  float: right;
+  width: 40%;
+}
+
+.options {
+  height: 240px;
+  padding-right: 12px;
+}
+
+.buttons {
+  text-align: center;
+}
+.buttons > button {
+  display: inline-block;
+  width: 120px;
+  line-height: 2.3;
+  font-size: 13px;
+  background-color: #C84648;
+  border: 1px solid #814744;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #fff;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+.buttons > button:hover {
+  background-color: #cc5254;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cc5254), to(#c94a4c));
+  background: -webkit-linear-gradient(top, #cc5254, #c94a4c);
+  background: -moz-linear-gradient(top, #cc5254, #c94a4c);
+  background: -ms-linear-gradient(top, #cc5254, #c94a4c);
+  background: -o-linear-gradient(top, #cc5254, #c94a4c);
+}
+
+.inputs > div {
+  width: 100%;
+  text-align: left;
+  clear: both;
+  margin: 2px 0;
+}
+.inputs > div > input {
+  width: 60px;
+  float: right;
+  margin-top: 3px;
+  line-height: 1.6;
+  text-align: center;
+  background: #eee;
+  border: 1px solid #82678f;
+  color: #312736;
+}
+.inputs > div > input:focus {
+  background-color: #fff;
+  border: 1px solid #9a83a6;
+}
+.inputs > div > input.large {
+  width: 100px;
+}
+.inputs > div > input.full-size {
+  width: 100%;
+}
+
+.download-button {
+  display: inline-block;
+  color: #fff;
+  line-height: 2;
+  padding: 0 30px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  font-size: 30px;
+  background-color: #4c3c54;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+}
+.download-button:hover {
+  background-color: #594762;
+  background: -webkit-gradient(linear, left top, left bottom, from(#594762), to(#51415a));
+  background: -webkit-linear-gradient(top, #594762, #51415a);
+  background: -moz-linear-gradient(top, #594762, #51415a);
+  background: -ms-linear-gradient(top, #594762, #51415a);
+  background: -o-linear-gradient(top, #594762, #51415a);
 }
