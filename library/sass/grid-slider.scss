@@ -9,19 +9,6 @@
 *{
 	@include box-sizing(border-box);
 }
-html, body{
-	width: 100%;
-	height: 100%;
-	margin: 0; padding: 0;
-	background-color: #ccc;
-}
-.main-wrapper{
-	width: 800px;
-	min-height: 100%;
-	margin: 0 auto;
-	overflow: hidden;
-	background-color: #eee;
-}
 #mySlider{
 	width: 500px;
 	height: 500px;
