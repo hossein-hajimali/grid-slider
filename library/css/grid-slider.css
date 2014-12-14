@@ -28,21 +28,27 @@ html, body {
   position: relative;
 }
 
-.slider-controllers {
-  position: absolute;
-  width: 100%;
-  top: -40px;
-}
-
 .slider-controller {
   position: absolute;
   cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.6;
 }
 .slider-controller.prev {
-  right: 0;
+  right: -50px;
+  -webkit-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  transform: translate(0, 50%);
 }
 .slider-controller.next {
-  left: 0;
+  left: -50px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 .slider-controller.disable {
   color: red;
@@ -74,6 +80,9 @@ html, body {
 }
 
 .each-slide {
-  background: green;
-  border: 1px solid #fff;
+  overflow: hidden;
+}
+.each-slide img {
+  max-width: 100%;
+  max-height: 100%;
 }

@@ -48,9 +48,9 @@
 			$prev = $('.slider-controller.prev'),
 			rowCounter = [];
 
-			
-		$next.html(settings.nextText);
-		$prev.html(settings.prevText);
+
+		$next.html(settings.nextText).css('top', slideHeight/2);
+		$prev.html(settings.prevText).css('bottom', slideHeight/2);;
 		$eachElement.each(function(){
 			$slides.push($(this).html());
 		});

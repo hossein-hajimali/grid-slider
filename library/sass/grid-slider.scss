@@ -28,20 +28,22 @@ html, body{
 	margin: 100px auto;
 	position: relative;
 }
-.slider-controllers{
-	position: absolute;
-	width: 100%;
-	top: -40px;
-}
 .slider-controller{
 	position: absolute;
 	cursor: pointer;
+	display: inline-block;
+	@include square(50px);
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.6;
 
 	&.prev{
-		right: 0;
+		right: -50px;
+		@include translate(0, 50%);
 	}
 	&.next{
-		left: 0;
+		left: -50px;
+		@include translate(0, -50%);
 	}
 	&.disable{
 		color: red;
@@ -57,7 +59,6 @@ html, body{
 }
 .slider-row{
 	position: absolute;
-	//@include transition(all 0.2s linear);
 
 	&:nth-child(odd){
 		left: 0;
@@ -73,6 +74,9 @@ html, body{
 	}
 }
 .each-slide{
-	background: green;
-	border: 1px solid #fff;
+	overflow: hidden;
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
 }
