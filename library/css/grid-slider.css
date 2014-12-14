@@ -1,0 +1,79 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+}
+
+.main-wrapper {
+  width: 800px;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+#mySlider {
+  width: 600px;
+  height: 600px;
+  border: 1px solid #777;
+  margin: 100px auto;
+  position: relative;
+}
+
+.slider-controllers {
+  position: absolute;
+  width: 100%;
+  top: -40px;
+}
+
+.slider-controller {
+  position: absolute;
+  cursor: pointer;
+}
+.slider-controller.prev {
+  right: 0;
+}
+.slider-controller.next {
+  left: 0;
+}
+.slider-controller.disable {
+  color: red;
+  cursor: default;
+  pointer-events: none;
+}
+
+.slider-frame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-row {
+  position: absolute;
+}
+.slider-row:nth-child(odd) {
+  left: 0;
+}
+.slider-row:nth-child(odd) .each-slide {
+  float: left;
+}
+.slider-row:nth-child(even) {
+  right: 0;
+}
+.slider-row:nth-child(even) .each-slide {
+  float: right;
+}
+
+.each-slide {
+  background: green;
+  border: 1px solid #fff;
+}

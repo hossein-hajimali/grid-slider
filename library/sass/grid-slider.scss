@@ -57,7 +57,7 @@ html, body{
 }
 .slider-row{
 	position: absolute;
-	@include transition(all 0.2s linear);
+	//@include transition(all 0.2s linear);
 
 	&:nth-child(odd){
 		left: 0;
