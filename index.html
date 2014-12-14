@@ -32,9 +32,16 @@
 
         <!-- Scripts -->
         <script type="text/javascript" src="library/js/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="library/js/grid-slider.js"></script>
+        <script type="text/javascript" src="library/js/min/grid-slider.min.js"></script>
         <script type="text/javascript">
-            $('#mySlider').gridSlider();
+            $('#mySlider').gridSlider({
+                rowNumber: 3,
+                colNumber: 3,
+                animateTime: 0.1,
+                easing: "linear",
+                nextHtml: '<i class="fa fa-angle-left"></i>',
+                prevHtml: '<i class="fa fa-angle-right"></i>'
+            });
         </script>
         <!-- /Scripts -->
     </body>

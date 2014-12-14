@@ -5,8 +5,8 @@
 			colNumber: 3,
 			animateTime: 0.2,
 			easing: "ease",
-			nextText: '<',
-			prevText: '>'
+			nextHtml: '<',
+			prevHtml: '>'
 		}, options);
 		function moveSliderLeft($obj,index){
 			$obj.css({
@@ -49,8 +49,8 @@
 			rowCounter = [];
 
 
-		$next.html(settings.nextText).css('top', slideHeight/2);
-		$prev.html(settings.prevText).css('bottom', slideHeight/2);;
+		$next.html(settings.nextHtml).css('top', slideHeight/2);
+		$prev.html(settings.prevHtml).css('bottom', slideHeight/2);;
 		$eachElement.each(function(){
 			$slides.push($(this).html());
 		});
