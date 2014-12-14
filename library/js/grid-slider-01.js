@@ -3,12 +3,11 @@
 		var settings = $.extend({
 			rowNumber: 3,
 			colNumber: 3,
-			animateTime: 0.3,
+			animateTime: 0.2,
 			easing: "ease",
 			nextHtml: '<',
 			prevHtml: '>',
-			effect: 'normal',
-			rowActionTime: 100,
+			effect: 'normal'
 		}, options);
 		function moveSliderLeft($obj,index){
 			$obj.css({
@@ -38,15 +37,6 @@
 					moveSliderRight($('.slider-row.row'+index), rc*slideWidth);
 				}
 			}
-		}
-		function doSetTimeout(index, obj, j){
-			setTimeout(function(){
-				if(j){
-					checkRow(j, obj);
-				} else{
-					checkRow(index, obj);
-				}
-			}, index*settings.rowActionTime);
 		}
 		var $mother = $('#mySlider'),
 			$eachElement = $('#mySlider > .each-slide'),
@@ -78,7 +68,6 @@
 			if(settings.effect == "normal"){
 				$('.slider-frame').append('<div class="slider-row normal row'+i+'"></div>');
 				moveSliderLeft($('.slider-row.row'+i), rowCounter[i-1]*slideWidth);
-				doSetTimeout(i, rowCounter[i-1]);
 			} else if(settings.effect == 'snake'){
 				$('.slider-frame').append('<div class="slider-row snake row'+i+'"></div>');
 				if(i%2 == 1){
@@ -118,7 +107,7 @@
 		$next.on('click', function(){
 			for(var i=1; i<=sliderRow;i++){
 				rowCounter[i-1] ++;
-				doSetTimeout(i, rowCounter[i-1]);
+				checkRow(i, rowCounter[i-1]);
 			}
 			if(rowCounter[sliderRow-1] >= slidesLength-(sliderCol) && !$next.hasClass('disable')){
 				$next.addClass('disable');
@@ -129,9 +118,8 @@
 		});
 		$prev.on('click', function(){
 			for(var i=1; i<=sliderRow;i++){
-				var j = sliderRow-i;
-				rowCounter[j] --;
-				doSetTimeout(i, rowCounter[j],j+1);
+				rowCounter[i-1] --;
+				checkRow(i, rowCounter[i-1]);
 			}
 			if(rowCounter[0] > 0 && $next.hasClass('disable')){
 				$next.removeClass('disable');

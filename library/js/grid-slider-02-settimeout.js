@@ -3,7 +3,7 @@
 		var settings = $.extend({
 			rowNumber: 3,
 			colNumber: 3,
-			animateTime: 0.3,
+			animateTime: 0.2,
 			easing: "ease",
 			nextHtml: '<',
 			prevHtml: '>',
@@ -39,13 +39,9 @@
 				}
 			}
 		}
-		function doSetTimeout(index, obj, j){
+		function doSetTimeout(index, obj){
 			setTimeout(function(){
-				if(j){
-					checkRow(j, obj);
-				} else{
-					checkRow(index, obj);
-				}
+				checkRow(index, obj);
 			}, index*settings.rowActionTime);
 		}
 		var $mother = $('#mySlider'),
@@ -129,9 +125,8 @@
 		});
 		$prev.on('click', function(){
 			for(var i=1; i<=sliderRow;i++){
-				var j = sliderRow-i;
-				rowCounter[j] --;
-				doSetTimeout(i, rowCounter[j],j+1);
+				rowCounter[i-1] --;
+				doSetTimeout(i, rowCounter[i-1]);
 			}
 			if(rowCounter[0] > 0 && $next.hasClass('disable')){
 				$next.removeClass('disable');
