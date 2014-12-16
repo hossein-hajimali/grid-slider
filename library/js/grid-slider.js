@@ -1,5 +1,6 @@
 (function($){
 	$.fn.gridSlider = function(options){
+		$('.slider-frame').remove();
 		var settings = $.extend({
 			rowNumber: 3,
 			colNumber: 3,
@@ -62,7 +63,6 @@
 			$next = $('.slider-controller.next'),
 			$prev = $('.slider-controller.prev'),
 			rowCounter = [];
-
 		
 		$next.html(settings.nextHtml).css('top', slideHeight/2);
 		$prev.html(settings.prevHtml).css('bottom', slideHeight/2);;

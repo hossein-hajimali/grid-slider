@@ -109,32 +109,29 @@
         <script type="text/javascript" src="library/js/min/grid-slider.min.js"></script>
         <script type="text/javascript">
             $('#mySlider').gridSlider({
-                nextHtml: '<i class="fa fa-angle-left"></i>',
-                prevHtml: '<i class="fa fa-angle-right"></i>'
-            });
+                    rowNumber: $('#rowNumber').val(),
+                    colNumber: $('#colNumber').val(),
+                    animateTime: $('#animateTime').val(),
+                    easing: $('#easing').val(),
+                    nextHtml: $('#nextHtml').val(),
+                    prevHtml: $('#prevHtml').val(),
+                    effect: $(this).data('name'),
+                    rowActionTime: $('#rowActionTime').val()
+                });
             $('.buttons > button').each(function(){
                 $(this).on('click', function(){
-                    $('.slider-frame').remove();
-                    var $effect = $(this).data('name'),
-                        $rowNumber = $('#rowNumber').val(),
-                        $colNumber = $('#colNumber').val(),
-                        $rowActionTime = $('#rowActionTime').val(),
-                        $animateTime = $('#animateTime').val(),
-                        $easing = $('#easing').val(),
-                        $nextHtml = $('#nextHtml').val(),
-                        $prevHtml = $('#prevHtml').val();
                     $('#mySlider').gridSlider({
-                        rowNumber: $rowNumber,
-                        colNumber: $colNumber,
-                        animateTime: $animateTime,
-                        easing: $easing,
-                        nextHtml: $nextHtml,
-                        prevHtml: $prevHtml,
-                        effect: $effect,
-                        rowActionTime: $rowActionTime
+                        rowNumber: $('#rowNumber').val(),
+                        colNumber: $('#colNumber').val(),
+                        animateTime: $('#animateTime').val(),
+                        easing: $('#easing').val(),
+                        nextHtml: $('#nextHtml').val(),
+                        prevHtml: $('#prevHtml').val(),
+                        effect: $(this).data('name'),
+                        rowActionTime: $('#rowActionTime').val()
                     });
                 });
-            })
+            });
         </script>
         <!-- /Scripts -->
     </body>
