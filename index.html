@@ -58,79 +58,30 @@
                 <div class="each-slide"><span>13</span></div>
                 <div class="each-slide"><span>14</span></div>
                 <div class="each-slide"><span>15</span></div>
+                <div class="each-slide"><span>16</span></div>
+                <div class="each-slide"><span>17</span></div>
+                <div class="each-slide"><span>18</span></div>
+                <div class="each-slide"><span>19</span></div>
+                <div class="each-slide"><span>20</span></div>
                 <span class="slider-controller next">next</span>
                 <span class="slider-controller prev">prev</span>
             </div>
-            <h4 class="devider"><span>options</span></h4>
-            <div class="options clearfix">
-                <div class="left-section">
-                    <div class="buttons">
-                        <button data-name="normal">normal</button>
-                        <button data-name="snake">snake</button>
-                    </div>
-                </div>
-                <div class="right-section">
-                    <div class="inputs">
-                        <div>
-                            rowNumber:
-                            <input type="text" id="rowNumber" data-name="rowNumber" value="3">
-                        </div>
-                        <div>
-                            colNumber:
-                            <input type="text" id="colNumber" data-name="colNumber" value="3">
-                        </div>
-                        <div>
-                            rowActionTime (ms):
-                            <input type="text" id="rowActionTime" data-name="rowActionTime" value="100">
-                        </div>
-                        <div>
-                            animateTime (s):
-                            <input type="text" id="animateTime" data-name="animateTime" value="0.3"> 
-                        </div>
-                        <div>
-                            easing:
-                            <input type="text" id="easing" class="large" data-name="easing" value="ease"> 
-                        </div>
-                        <div>
-                            nextHtml:
-                            <input type="text" id="nextHtml" data-name="nextHtml" value='<i class="fa fa-angle-left"></i>'>
-                        </div>
-                        <div>
-                            prevHtml:
-                            <input type="text" id="prevHtml" data-name="prevHtml" value='<i class="fa fa-angle-right"></i>'>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <a href="https://github.com/hossein-haijmali/grid-slider" target="_blank" class="download-button">Download &amp; Documentation <i class="fa fa-download"></i></a>
         </div>
+
+
 
         <!-- Scripts -->
         <script type="text/javascript" src="library/js/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="library/js/min/grid-slider.min.js"></script>
         <script type="text/javascript">
             $('#mySlider').gridSlider({
-                    rowNumber: $('#rowNumber').val(),
-                    colNumber: $('#colNumber').val(),
-                    animateTime: $('#animateTime').val(),
-                    easing: $('#easing').val(),
-                    nextHtml: $('#nextHtml').val(),
-                    prevHtml: $('#prevHtml').val(),
-                    effect: $(this).data('name'),
-                    rowActionTime: $('#rowActionTime').val()
-                });
-            $('.buttons > button').each(function(){
-                $(this).on('click', function(){
-                    $('#mySlider').gridSlider({
-                        rowNumber: $('#rowNumber').val(),
-                        colNumber: $('#colNumber').val(),
-                        animateTime: $('#animateTime').val(),
-                        easing: $('#easing').val(),
-                        nextHtml: $('#nextHtml').val(),
-                        prevHtml: $('#prevHtml').val(),
-                        effect: $(this).data('name'),
-                        rowActionTime: $('#rowActionTime').val()
-                    });
-                });
+                effect: 'normal',
+                rowNumber: 4,
+                colNumber: 4,
+                nextHtml: '<i class="fa fa-angle-left"></i>',
+                prevHtml: '<i class="fa fa-angle-right"></i>'
             });
         </script>
         <!-- /Scripts -->

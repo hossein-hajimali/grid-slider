@@ -2175,6 +2175,23 @@
   content: "\f20c";
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a, a:hover, a:focus, a:active {
+  outline: 0 none;
+  text-decoration: none;
+}
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -2250,62 +2267,82 @@ html, body {
 }
 
 .each-slide:nth-child(1) {
-  background-color: #7d4542;
+  background-color: #7a4440;
 }
 
 .each-slide:nth-child(2) {
-  background-color: #8b4d49;
+  background-color: #844946;
 }
 
 .each-slide:nth-child(3) {
-  background-color: #985450;
+  background-color: #8e4f4b;
 }
 
 .each-slide:nth-child(4) {
-  background-color: #a55c57;
+  background-color: #985450;
 }
 
 .each-slide:nth-child(5) {
-  background-color: #ad6864;
+  background-color: #a25a55;
 }
 
 .each-slide:nth-child(6) {
-  background-color: #b47571;
+  background-color: #aa615d;
 }
 
 .each-slide:nth-child(7) {
-  background-color: #bb827e;
+  background-color: #af6b67;
 }
 
 .each-slide:nth-child(8) {
-  background-color: #c28f8c;
+  background-color: #b47571;
 }
 
 .each-slide:nth-child(9) {
-  background-color: #c99c99;
+  background-color: #ba7f7b;
 }
 
 .each-slide:nth-child(10) {
-  background-color: #d0a9a7;
+  background-color: #bf8885;
 }
 
 .each-slide:nth-child(11) {
-  background-color: #d7b6b4;
+  background-color: #c4928f;
 }
 
 .each-slide:nth-child(12) {
-  background-color: #dec3c1;
+  background-color: #c99c99;
 }
 
 .each-slide:nth-child(13) {
-  background-color: #e6d0cf;
+  background-color: #cfa6a3;
 }
 
 .each-slide:nth-child(14) {
-  background-color: #eddddc;
+  background-color: #d4afad;
 }
 
 .each-slide:nth-child(15) {
+  background-color: #d9b9b7;
+}
+
+.each-slide:nth-child(16) {
+  background-color: #dec3c1;
+}
+
+.each-slide:nth-child(17) {
+  background-color: #e4cdcb;
+}
+
+.each-slide:nth-child(18) {
+  background-color: #e9d6d5;
+}
+
+.each-slide:nth-child(19) {
+  background-color: #eee0df;
+}
+
+.each-slide:nth-child(20) {
   background-color: #f4eae9;
 }
 
@@ -2387,12 +2424,12 @@ html, body {
 .download-button {
   display: inline-block;
   color: #fff;
-  line-height: 2;
+  line-height: 3;
   padding: 0 30px;
   margin-top: 50px;
   margin-bottom: 80px;
-  font-size: 30px;
-  background-color: #4c3c54;
+  font-size: 20px;
+  background-color: #91504d;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -2402,10 +2439,10 @@ html, body {
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
 }
 .download-button:hover {
-  background-color: #594762;
-  background: -webkit-gradient(linear, left top, left bottom, from(#594762), to(#51415a));
-  background: -webkit-linear-gradient(top, #594762, #51415a);
-  background: -moz-linear-gradient(top, #594762, #51415a);
-  background: -ms-linear-gradient(top, #594762, #51415a);
-  background: -o-linear-gradient(top, #594762, #51415a);
+  background-color: #a25a55;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a25a55), to(#985450));
+  background: -webkit-linear-gradient(top, #a25a55, #985450);
+  background: -moz-linear-gradient(top, #a25a55, #985450);
+  background: -ms-linear-gradient(top, #a25a55, #985450);
+  background: -o-linear-gradient(top, #a25a55, #985450);
 }
